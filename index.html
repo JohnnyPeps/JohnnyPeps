@@ -3,71 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Game Portfolio</title>
+    <title>JohnnyPeps | Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1a1a1a;
-            color: #fff;
-            margin: 0;
-            padding: 40px 20px;
-            text-align: center;
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1e;
+            --accent-color: #fa5c5c;
+            --text-main: #ffffff;
+            --text-muted: #a0a0aa;
+            --border-color: #2b2b32;
         }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 50px 20px;
+            line-height: 1.6;
+        }
+
         .container {
-            max-width: 800px;
+            max-width: 650px;
             margin: 0 auto;
         }
-        h1 { color: #fa5c5c; }
-        
-        /* Social Media Section Styling */
-        .social-links {
-            margin: 25px 0 40px 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center;
+
+        /* Profile Header */
+        header {
+            margin-bottom: 35px;
         }
-        .social-row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Unified Social Grid */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
             gap: 10px;
+            margin: 30px 0 50px 0;
+            width: 100%;
         }
         .social-btn {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 10px;
+            background-color: var(--card-bg);
+            color: var(--text-main);
             text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 14px;
-            transition: opacity 0.2s;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
         }
-        .social-btn:hover { opacity: 0.8; }
-        
-        /* Platform Colors */
-        .fb { background-color: #1877f2; }
-        .ig { background-color: #e1306c; }
-        .x-com { background-color: #000000; border: 1px solid #333; }
-        .yt { background-color: #ff0000; }
-        .tt { background-color: #010101; border: 1px solid #ee1d52; }
-        .rd { background-color: #ff4500; }
-        .st { background-color: #171a21; border: 1px solid #66c0f4; }
-        .tw { background-color: #9146ff; }
-        .sp { background-color: #1ed760; color: #000; } /* Dark text for Spotify readability */
-        .eb { background-color: #0064d2; border: 1px solid #e53238; }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            background-color: #222227;
+        }
 
-        .widget-container {
-            margin: 30px auto;
-            max-width: 552px;
+        /* Subtle Brand Hover Accents */
+        .fb:hover { border-color: #1877f2; color: #1877f2; }
+        .ig:hover { border-color: #e1306c; color: #e1306c; }
+        .x-com:hover { border-color: #fff; }
+        .yt:hover { border-color: #ff0000; color: #ff0000; }
+        .tt:hover { border-color: #00f2fe; color: #00f2fe; }
+        .rd:hover { border-color: #ff4500; color: #ff4500; }
+        .st:hover { border-color: #66c0f4; color: #66c0f4; }
+        .tw:hover { border-color: #9146ff; color: #9146ff; }
+        .sp:hover { border-color: #1ed760; color: #1ed760; }
+        .eb:hover { border-color: #e53238; color: #e53238; }
+
+        /* Sections */
+        section {
+            margin-bottom: 45px;
         }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        /* Widgets & Videos */
+        .widget-wrapper {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            justify-content: center;
+        }
+        .widget-wrapper iframe {
+            width: 100%;
+            max-width: 552px;
+            border-radius: 6px;
+            border: 0;
+        }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
             height: 0;
-            overflow: hidden;
+            width: 100%;
             max-width: 552px;
-            margin: 0 auto;
         }
         .video-container iframe {
             position: absolute;
@@ -75,38 +132,61 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
-        }
-        h2 {
-            color: #dadada;
-            margin-top: 40px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
+            border-radius: 6px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <h1>JohnnyPeps</h1>
-        <p>Game Developer & Storyteller</p>
         
-        <div class="social-links">
-            <div class="social-row">
-                <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
-                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
-                <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
-                <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube Channel</a>
-            </div>
+        <header>
+            <h1>JohnnyPeps</h1>
+            <p class="subtitle">Game Developer & Storyteller</p>
+        </header>
+
+        <!-- CLEAN AUTOMATIC GRID FOR ALL 11 LINKS -->
+        <div class="social-grid">
+            <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
+            <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube</a>
+            <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
+            <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
             
-            <div class="social-row">
-                <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
-                <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
-                <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
-                <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam Profile</a>
+            <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
+            <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
+            <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
+            <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
+            
+            <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam</a>
+            <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
+            <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb">eBay Store</a>
+        </div>
+
+        <section>
+            <h2>My Games</h2>
+            
+            <!-- TOXIC RELATIONSHIP -->
+            <div class="widget-wrapper">
+                <iframe height="167" src="https://itch.io/embed/4695680"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
             </div>
 
-            <div class="social-row">
-                <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
-                <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
-                <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb
+            <!-- PARALEGAL SIMULATOR -->
+            <div class="widget-wrapper">
+                <iframe height="167" src="https://itch.io/embed/4677444"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Media</h2>
+            <div class="widget-wrapper">
+                <div class="video-container">
+                    <!-- Swap out YOUR_VIDEO_ID_HERE with an active YouTube upload code -->
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+</body>
+</html>
