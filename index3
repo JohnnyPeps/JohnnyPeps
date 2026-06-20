@@ -1,0 +1,35 @@
+<style>
+    .instagram-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        padding: 20px;
+        max-width: 552px;
+        margin: 0 auto 20px auto;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        text-align: center;
+    }
+    .instagram-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        color: #ffffff;
+        text-decoration: none;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        margin-top: 15px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .instagram-btn:hover {
+        transform: translateY(-2px);
+    }
+</style>
+
+<div class="instagram-card">
+    <h3 style="margin: 0 0 8px 0; color: var(--text-main);">Follow Me on Instagram</h3>
+    <p style="margin: 0; color: var(--text-muted); font-size: 14px;">Stay updated with game dev screenshots, behind-the-scenes stories, and updates!</p>
+    <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="instagram-btn">View Profile @johnnypeps</a>
+</div>
