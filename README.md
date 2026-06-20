@@ -1,7 +1,5 @@
 ## Hi there 👋
 
-<!--
-**JohnnyPeps/JohnnyPeps** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
@@ -13,5 +11,4 @@ Here are some ideas to get you started:
 - 📫 How to reach me: ... johnnypeps@live.com
 - 😄 Pronouns: ... He/Him!
 - ⚡ Fun fact: ... I don't need much sleep!
--->
-<iframe frameborder="0" src="https://itch.io/embed/4695680" width="552" height="167"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
+
