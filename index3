@@ -1,35 +1,250 @@
-<style>
-    .instagram-card {
-        background-color: var(--card-bg);
-        border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 20px;
-        max-width: 552px;
-        margin: 0 auto 20px auto;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        text-align: center;
-    }
-    .instagram-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        color: #ffffff;
-        text-decoration: none;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 14px;
-        margin-top: 15px;
-        transition: transform 0.2s ease-in-out;
-    }
-    .instagram-btn:hover {
-        transform: translateY(-2px);
-    }
-</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JohnnyPeps | Portfolio</title>
 
-<div class="instagram-card">
-    <h3 style="margin: 0 0 8px 0; color: var(--text-main);">Follow Me on Instagram</h3>
-    <p style="margin: 0; color: var(--text-muted); font-size: 14px;">Stay updated with game dev screenshots, behind-the-scenes stories, and updates!</p>
-    <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="instagram-btn">View Profile @johnnypeps</a>
-</div>
+    <meta property="og:title" content="JohnnyPeps | Game Portfolio" />
+    <meta property="og:description" content="Check out my interactive fiction games, dev logs, and social media channels." />
+    <meta property="og:url" content="https://johnnypeps.github.io/JohnnyPeps/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://img.itch.zone/aW1nLzI3OTg0NTE2LnBuZw==/315x250%23c/KPo6Fk.png" />
+    <meta property="og:image:width" content="315" />
+    <meta property="og:image:height" content="250" />
+
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1e;
+            --accent-color: #fa5c5c;
+            --text-main: #ffffff;
+            --text-muted: #a0a0aa;
+            --border-color: #2b2b32;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 50px 20px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 35px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 8px 0;
+            letter-spacing: -0.5px;
+            color: var(--text-main);
+        }
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            margin: 0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        section {
+            margin-bottom: 45px;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+        }
+
+        .games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            flex: 1;
+            min-width: 260px;
+            max-width: 340px;
+            display: flex;
+            justify-content: center;
+        }
+        .game-card iframe {
+            border: 0;
+            width: 100%;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 10px;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            background-color: #222227;
+        }
+
+        .fb:hover { border-color: #1877f2; color: #1877f2; }
+        .ig:hover { border-color: #e1306c; color: #e1306c; }
+        .x-com:hover { border-color: #fff; }
+        .yt:hover { border-color: #ff0000; color: #ff0000; }
+        .ytm:hover { border-color: #ff0000; color: #fa5c5c; }
+        .tt:hover { border-color: #00f2fe; color: #00f2fe; }
+        .rd:hover { border-color: #ff4500; color: #ff4500; }
+        .st:hover { border-color: #66c0f4; color: #66c0f4; }
+        .tw:hover { border-color: #9146ff; color: #9146ff; }
+        .sp:hover { border-color: #1ed760; color: #1ed760; }
+        .eb:hover { border-color: #e53238; color: #e53238; }
+
+        /* INSTAGRAM EMBED CARD STYLES */
+        .instagram-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 552px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+        .instagram-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            margin-top: 15px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .instagram-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .media-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            width: 100%;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>JohnnyPeps</h1>
+            <p class="subtitle">Game Developer & Storyteller</p>
+        </header>
+
+        <section>
+            <h2>My Games</h2>
+            <div class="games-grid">
+                <div class="game-card">
+                    <iframe width="208" height="208" src="https://itch.io/embed/4695680?linkback=true&border_width=0&bg_color=1a1a1e&fg_color=ffffff&link_color=fa5c5c&border_color=2b2b32"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
+                </div>
+                <div class="game-card">
+                    <iframe width="208" height="208" src="https://itch.io/embed/4677444?linkback=true&border_width=0&bg_color=1a1a1e&fg_color=ffffff&link_color=fa5c5c&border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Connect With Me</h2>
+            <div class="social-grid">
+                <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
+                <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube</a>
+                <a href="https://music.youtube.com/@johnnyDKin" target="_blank" class="social-btn ytm">YouTube Music</a>
+                <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
+                
+                <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
+                <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
+                <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
+                
+                <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
+                <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam</a>
+                <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
+                <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb">eBay Store</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Social</h2>
+            <div class="instagram-card">
+                <h3 style="margin: 0 0 8px 0; color: var(--text-main);">Follow Me on Instagram</h3>
+                <p style="margin: 0; color: var(--text-muted); font-size: 14px;">Stay updated with game dev screenshots, behind-the-scenes stories, and updates!</p>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="instagram-btn">View Profile @johnnypeps</a>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Media</h2>
+            <div class="media-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+    </div>
+
+</body>
+</html>
