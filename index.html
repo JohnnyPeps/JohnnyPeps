@@ -63,7 +63,7 @@
             padding-bottom: 8px;
         }
 
-        /* Widgets & Videos */
+        /* Fixed Responsive Mobile Wrappers for itch embeds */
         .widget-wrapper {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -73,15 +73,17 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
             display: flex;
             justify-content: center;
+            overflow: hidden;
         }
         .widget-wrapper iframe {
             width: 100%;
             max-width: 552px;
+            min-width: 280px; /* Prevents layout collapse on tiny screens */
             border-radius: 6px;
             border: 0;
         }
 
-        /* Social Grid Styling (Perfectly balanced at 12 items) */
+        /* Social Grid Styling */
         .social-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
@@ -162,7 +164,7 @@
             </div>
         </section>
 
-        <!-- EVEN GRID LAYOUT (12 LINKS) -->
+        <!-- SOCIAL LINKS -->
         <section>
             <h2>Connect With Me</h2>
             <div class="social-grid">
@@ -183,12 +185,12 @@
             </div>
         </section>
 
+        <!-- FEATURED VIDEO -->
         <section>
             <h2>Featured Media</h2>
             <div class="widget-wrapper">
                 <div class="video-container">
-                    <!-- Replace YOUR_VIDEO_ID_HERE with your active YouTube video ID -->
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?list=RDdQw4w9WgXcQ" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
