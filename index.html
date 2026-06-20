@@ -31,6 +31,7 @@
         /* Profile Header */
         header {
             margin-bottom: 35px;
+            text-align: center;
         }
         h1 {
             font-size: 2.5rem;
@@ -47,45 +48,6 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* Unified Social Grid */
-        .social-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-            gap: 10px;
-            margin: 30px 0 50px 0;
-            width: 100%;
-        }
-        .social-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 12px 10px;
-            background-color: var(--card-bg);
-            color: var(--text-main);
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 13px;
-            font-weight: 600;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease-in-out;
-        }
-        .social-btn:hover {
-            transform: translateY(-2px);
-            background-color: #222227;
-        }
-
-        /* Subtle Brand Hover Accents */
-        .fb:hover { border-color: #1877f2; color: #1877f2; }
-        .ig:hover { border-color: #e1306c; color: #e1306c; }
-        .x-com:hover { border-color: #fff; }
-        .yt:hover { border-color: #ff0000; color: #ff0000; }
-        .tt:hover { border-color: #00f2fe; color: #00f2fe; }
-        .rd:hover { border-color: #ff4500; color: #ff4500; }
-        .st:hover { border-color: #66c0f4; color: #66c0f4; }
-        .tw:hover { border-color: #9146ff; color: #9146ff; }
-        .sp:hover { border-color: #1ed760; color: #1ed760; }
-        .eb:hover { border-color: #e53238; color: #e53238; }
 
         /* Sections */
         section {
@@ -119,9 +81,48 @@
             border: 0;
         }
 
+        /* Social Grid Styling */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+            width: 100%;
+        }
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 10px;
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
+        }
+        .social-btn:hover {
+            transform: translateY(-2px);
+            background-color: #222227;
+        }
+
+        /* Brand Hover Accents */
+        .fb:hover { border-color: #1877f2; color: #1877f2; }
+        .ig:hover { border-color: #e1306c; color: #e1306c; }
+        .x-com:hover { border-color: #fff; }
+        .yt:hover { border-color: #ff0000; color: #ff0000; }
+        .tt:hover { border-color: #00f2fe; color: #00f2fe; }
+        .rd:hover { border-color: #ff4500; color: #ff4500; }
+        .st:hover { border-color: #66c0f4; color: #66c0f4; }
+        .tw:hover { border-color: #9146ff; color: #9146ff; }
+        .sp:hover { border-color: #1ed760; color: #1ed760; }
+        .eb:hover { border-color: #e53238; color: #e53238; }
+
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             width: 100%;
             max-width: 552px;
@@ -145,23 +146,7 @@
             <p class="subtitle">Game Developer & Storyteller</p>
         </header>
 
-        <!-- CLEAN AUTOMATIC GRID FOR ALL 11 LINKS -->
-        <div class="social-grid">
-            <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
-            <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube</a>
-            <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
-            <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
-            
-            <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
-            <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
-            <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
-            <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
-            
-            <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam</a>
-            <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
-            <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb">eBay Store</a>
-        </div>
-
+        <!-- GAMES ARE NOW FIRST -->
         <section>
             <h2>My Games</h2>
             
@@ -176,11 +161,31 @@
             </div>
         </section>
 
+        <!-- SOCIALS ARE NOW BELOW THE GAMES -->
+        <section>
+            <h2>Connect With Me</h2>
+            <div class="social-grid">
+                <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
+                <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube</a>
+                <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
+                <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
+                
+                <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
+                <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
+                <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
+                
+                <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam</a>
+                <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
+                <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb">eBay Store</a>
+            </div>
+        </section>
+
         <section>
             <h2>Featured Media</h2>
             <div class="widget-wrapper">
                 <div class="video-container">
-                    <!-- Swap out YOUR_VIDEO_ID_HERE with an active YouTube upload code -->
+                    <!-- Replace YOUR_VIDEO_ID_HERE with a real YouTube ID -->
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
                 </div>
             </div>
