@@ -22,11 +22,20 @@
         /* Social Media Section Styling */
         .social-links {
             margin: 25px 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        .social-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
         .social-btn {
             display: inline-block;
             padding: 10px 20px;
-            margin: 5px;
             color: #fff;
             text-decoration: none;
             border-radius: 4px;
@@ -35,18 +44,26 @@
             transition: opacity 0.2s;
         }
         .social-btn:hover { opacity: 0.8; }
+        
+        /* Platform Colors */
         .fb { background-color: #1877f2; }
         .ig { background-color: #e1306c; }
         .x-com { background-color: #000000; border: 1px solid #333; }
         .yt { background-color: #ff0000; }
+        .tt { background-color: #010101; border: 1px solid #ee1d52; }
+        .rd { background-color: #ff4500; }
+        .st { background-color: #171a21; border: 1px solid #66c0f4; }
+        .tw { background-color: #9146ff; }
+        .sp { background-color: #1ed760; color: #000; } /* Dark text for Spotify readability */
+        .eb { background-color: #0064d2; border: 1px solid #e53238; }
 
         .widget-container {
             margin: 30px auto;
-            max-width: 552px; /* Matches your widget widths */
+            max-width: 552px;
         }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 552px;
@@ -74,36 +91,22 @@
         <h1>JohnnyPeps</h1>
         <p>Game Developer & Storyteller</p>
         
-        <!-- SOCIAL MEDIA LINK TREE -->
         <div class="social-links">
-            <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
-            <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
-            <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
-            <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube Channel</a>
-        </div>
-
-        <h2>My Indie Games</h2>
-        
-        <!-- FIRST GAME: TOXIC RELATIONSHIP -->
-        <div class="widget-container">
-            <iframe frameborder="0" src="https://itch.io/embed/4695680" width="552" height="167"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
-        </div>
-
-        <!-- SECOND GAME: PARALEGAL SIMULATOR -->
-        <div class="widget-container">
-            <iframe frameborder="0" src="https://itch.io/embed/4677444" width="552" height="167"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
-        </div>
-
-        <h2>Featured Video</h2>
-        <!-- YOUTUBE EMBED PLAYER -->
-        <div class="widget-container">
-            <div class="video-container">
-                <!-- Change the code at the end of the URL (after /embed/) to your specific video ID to showcase a specific clip! -->
-                <iframe src="https://www.youtube.com/embed/shorts/Z8Z5x35fdNU" allowfullscreen></iframe>
+            <div class="social-row">
+                <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
+                <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
+                <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube Channel</a>
             </div>
-        </div>
-        
-    </div>
+            
+            <div class="social-row">
+                <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
+                <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
+                <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
+                <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam Profile</a>
+            </div>
 
-</body>
-</html>
+            <div class="social-row">
+                <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
+                <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
+                <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb
