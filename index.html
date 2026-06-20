@@ -21,6 +21,7 @@
             margin: 0;
             padding: 50px 20px;
             line-height: 1.6;
+            text-align: center;
         }
 
         .container {
@@ -31,7 +32,6 @@
         /* Profile Header */
         header {
             margin-bottom: 35px;
-            text-align: center;
         }
         h1 {
             font-size: 2.5rem;
@@ -63,24 +63,29 @@
             padding-bottom: 8px;
         }
 
-        /* Fixed Responsive Mobile Wrappers for itch embeds */
-        .widget-wrapper {
+        /* Responsive Grid for Square Widgets */
+        .games-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .game-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 15px;
-            margin-bottom: 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            flex: 1;
+            min-width: 260px;
+            max-width: 340px;
             display: flex;
             justify-content: center;
-            overflow: hidden;
         }
-        .widget-wrapper iframe {
-            width: 100%;
-            max-width: 552px;
-            min-width: 280px; /* Prevents layout collapse on tiny screens */
-            border-radius: 6px;
+        .game-card iframe {
             border: 0;
+            width: 100%;
         }
 
         /* Social Grid Styling */
@@ -123,12 +128,18 @@
         .sp:hover { border-color: #1ed760; color: #1ed760; }
         .eb:hover { border-color: #e53238; color: #e53238; }
 
+        .media-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             width: 100%;
-            max-width: 552px;
         }
         .video-container iframe {
             position: absolute;
@@ -137,6 +148,7 @@
             width: 100%;
             height: 100%;
             border-radius: 6px;
+            border: 0;
         }
     </style>
 </head>
@@ -149,18 +161,23 @@
             <p class="subtitle">Game Developer & Storyteller</p>
         </header>
 
-        <!-- GAMES AT THE TOP -->
+        <!-- GAMES SECTION -->
         <section>
             <h2>My Games</h2>
-            
-            <!-- TOXIC RELATIONSHIP -->
-            <div class="widget-wrapper">
-                <iframe height="167" src="https://itch.io/embed/4695680"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
-            </div>
+            <div class="games-grid">
+                
+                <!-- TOXIC RELATIONSHIP (SQUARE EMBED) -->
+                <div class="game-card">
+                    <!-- Note the change to width="208" height="208" and style="square" parameters -->
+                    <iframe width="208" height="208" src="https://itch.io/embed/4695680?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
+                </div>
 
-            <!-- PARALEGAL SIMULATOR -->
-            <div class="widget-wrapper">
-                <iframe height="167" src="https://itch.io/embed/4677444"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+                <!-- PARALEGAL SIMULATOR (SQUARE EMBED) -->
+                <div class="game-card">
+                    <!-- Note the change to width="208" height="208" and style="square" parameters -->
+                    <iframe width="208" height="208" src="https://itch.io/embed/4677444?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+                </div>
+
             </div>
         </section>
 
@@ -185,10 +202,10 @@
             </div>
         </section>
 
-        <!-- FEATURED VIDEO -->
+        <!-- FEATURED MEDIA -->
         <section>
             <h2>Featured Media</h2>
-            <div class="widget-wrapper">
+            <div class="media-card">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
                 </div>
