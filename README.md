@@ -7,17 +7,18 @@
 - 💬 Ask me about ... Story Ideas!
 - 📫 How to reach me: ... johnnypeps@live.com
 - 😄 Pronouns: ... He/Him!
-- ⚡ Fun fact: ... I don't need much sleep!
+- ⚡ Fun fact: ... I don't need much sleep
 
-  <h2>My Games</h2>
-            
-            <!-- TOXIC RELATIONSHIP -->
-            <div class="widget-wrapper">
-                <iframe height="167" src="https://itch.io/embed/4695680"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
-            </div>
-
-            <!-- PARALEGAL SIMULATOR -->
-            <div class="widget-wrapper">
-                <iframe height="167" src="https://itch.io/embed/4677444"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
-            </div>
-        </section>
+  
+https://x.com/JohnnyDKin
+https://www.youtube.com/@johnnyDKin
+https://music.youtube.com/@johnnyDKin
+https://www.twitch.tv/johnnypeps
+https://open.spotify.com/user/johnnypeps
+https://www.tiktok.com/@johnnypeps_official
+https://www.tiktok.com/@john_rocco
+https://www.instagram.com/johnnypeps
+https://www.facebook.com/thelastone
+https://steamcommunity.com/id/johnnypeppers
+https://www.reddit.com/user/Johnnypeps
+https://www.ebay.com/usr/johnsquic
