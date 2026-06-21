@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JohnnyPeps | Portfolio</title>
 
+    <!-- LINK THUMBNAIL PREVIEW META TAGS -->
     <meta property="og:title" content="JohnnyPeps | Game Portfolio" />
     <meta property="og:description" content="Check out my interactive fiction games, dev logs, and social media channels." />
     <meta property="og:url" content="https://johnnypeps.github.io/JohnnyPeps/" />
@@ -70,28 +71,20 @@
             padding-bottom: 8px;
         }
 
-        .games-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-
+        /* ORIGINAL SEPARATED GAME CARD LAYOUT */
         .game-card {
             background-color: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 15px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-            flex: 1;
-            min-width: 260px;
-            max-width: 340px;
-            display: flex;
-            justify-content: center;
         }
         .game-card iframe {
             border: 0;
             width: 100%;
+            max-width: 552px;
+            height: 167px;
         }
 
         .social-grid {
@@ -194,18 +187,21 @@
             <p class="subtitle">Game Developer & Storyteller</p>
         </header>
 
+        <!-- GAMES SECTION USING ORIGINAL HORIZONTAL EMBEDS -->
         <section>
             <h2>My Games</h2>
-            <div class="games-grid">
-                <div class="game-card">
-                    <iframe width="208" height="208" src="https://itch.io/embed/4695680?linkback=true&border_width=0&bg_color=1a1a1e&fg_color=ffffff&link_color=fa5c5c&border_color=2b2b32"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
-                </div>
-                <div class="game-card">
-                    <iframe width="208" height="208" src="https://itch.io/embed/4677444?linkback=true&border_width=0&bg_color=1a1a1e&fg_color=ffffff&link_color=fa5c5c&border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
-                </div>
+            
+            <div class="game-card">
+                <iframe src="https://itch.io/embed/4695680?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
             </div>
+
+            <div class="game-card">
+                <iframe src="https://itch.io/embed/4677444?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+            </div>
+            
         </section>
 
+        <!-- BALANCED 12-LINK SOCIAL GRID -->
         <section>
             <h2>Connect With Me</h2>
             <div class="social-grid">
@@ -226,6 +222,7 @@
             </div>
         </section>
 
+        <!-- INSTAGRAM DISPLAY SECTION -->
         <section>
             <h2>Featured Social</h2>
             <div class="instagram-card">
@@ -235,11 +232,12 @@
             </div>
         </section>
 
+        <!-- FEATURED VIDEO PLAYBACK -->
         <section>
             <h2>Featured Media</h2>
             <div class="media-card">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/cvHFf2IwWW0" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
