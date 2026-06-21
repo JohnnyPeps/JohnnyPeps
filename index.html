@@ -176,6 +176,51 @@
             border-radius: 6px;
             border: 0;
         }
+   /* ABOUT THE DEVELOPER STYLES */
+        .about-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .about-bio {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+        .skills-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        .skill-tag {
+            background-color: #222227;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
+        }
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
     </style>
 </head>
 <body>
@@ -232,7 +277,7 @@
             </div>
         </section>
 
-        <!-- FEATURED VIDEO PLAYBACK -->
+<!-- FEATURED VIDEO PLAYBACK -->
         <section>
             <h2>Featured Media</h2>
             <div class="media-card">
@@ -242,9 +287,7 @@
             </div>
         </section>
         
-    </div>
-
-    <!-- ABOUT THE DEVELOPER SECTION -->
+        <!-- ABOUT THE DEVELOPER SECTION -->
         <section>
             <h2>About the Developer</h2>
             <div class="about-card">
@@ -264,5 +307,7 @@
                 </div>
             </div>
         </section>
+        
+    </div> <!-- THIS CLOSES THE CONTAINER -->
 </body>
 </html>
