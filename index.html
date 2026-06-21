@@ -249,6 +249,57 @@
             from { opacity: 0; transform: translateY(2px); }
             to { opacity: 1; transform: translateY(0); }
         }
+/* PRESS KIT STYLES */
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 100%;
+        }
+        .press-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .press-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 5px 0;
+        }
+        .press-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+        .press-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222227;
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
+            text-align: center;
+        }
+        .press-link:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
@@ -271,8 +322,37 @@
             <div class="game-card">
                 <iframe src="https://itch.io/embed/4677444?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
             </div>
-            
         </section>
+            <!-- PRESS KIT & MEDIA ASSETS SECTION -->
+        <section>
+            <h2>Media & Press Kits</h2>
+            <div class="press-grid">
+                
+                <!-- Paralegal Simulator Press Kit -->
+                <div class="press-card">
+                    <div>
+                        <h3 class="press-title">Paralegal Simulator</h3>
+                        <p class="press-desc">Access high-resolution promotional banners, gameplay screenshots, transparent logos, and fact sheets for coverage.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1C_tAGl5f_bDKm6QQ6LF9N8fNNQS3vsys?usp=drive_link" target="_blank" class="press-link">
+                        Download Press Assets
+                    </a>
+                </div>
+
+                <!-- Toxic Relationship Press Kit -->
+                <div class="press-card">
+                    <div>
+                        <h3 class="press-title">Toxic Relationship</h3>
+                        <p class="press-desc">Download transparent titles, key promotional art, vertical graphics, and game details ready for media use.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1qE3fChHqKCGV6aczIY3t-cP0kzmhTW5E?usp=drive_link" target="_blank" class="press-link">
+                        Download Press Assets
+                    </a>
+                </div>
+
+            </div>
+        </section>
+      
 
         <!-- BALANCED 12-LINK SOCIAL GRID -->
         <section>
