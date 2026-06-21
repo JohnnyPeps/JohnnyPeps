@@ -221,6 +221,34 @@
             border-color: var(--accent-color);
             transform: translateY(-1px);
         }
+/* TWINE EASTER EGG STYLES */
+        .twine-easter-egg {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+            font-family: Courier, monospace; /* Gives it that classic IF engine feel */
+            font-size: 0.95rem;
+        }
+        .twine-node {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .twine-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-color);
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .twine-link:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(2px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -287,15 +315,44 @@
             </div>
         </section>
         
-        <!-- ABOUT THE DEVELOPER SECTION -->
+<!-- ABOUT THE DEVELOPER SECTION -->
         <section>
             <h2>About the Developer</h2>
             <div class="about-card">
                 <p class="about-bio">
                     Hey, I'm <strong>JohnnyPeps</strong>. I'm an independent game developer, writer, and digital creator focused on crafting immersive, choice-driven narrative experiences. I love building logic systems where your decisions genuinely matter—whether that's navigating intense psychological thrillers or managing complex, real-world simulations. Thanks for stopping by, and I hope you enjoy exploring the branching paths of my stories!
                 </p>
+
+                <!-- INTERACTIVE EASTER EGG START -->
+                <div class="twine-easter-egg">
+                    <!-- Start Node -->
+                    <div id="start-node" class="twine-node">
+                        You find yourself standing on a minimal portfolio website. A sleek grid of social icons hums quietly below. You can choose to <span class="twine-link" onclick="changeStory('click-game')">play a game</span> or <span class="twine-link" onclick="changeStory('look-around')">inspect the source code</span>.
+                    </div>
+
+                    <!-- Path A -->
+                    <div id="click-game" class="twine-node" style="display: none;">
+                        You scroll up and launch one of the interactive fiction titles. Hours pass instantly as variables cascade, branching story lines unfold, and your choices seal your fate. You emerge blinking into the dark room. Will you <span class="twine-link" onclick="changeStory('leave-review')">leave feedback on itch.io</span> or <span class="twine-link" onclick="changeStory('start-node')">turn back to the beginning</span>?
+                    </div>
+
+                    <!-- Path B -->
+                    <div id="look-around" class="twine-node" style="display: none;">
+                        You peer behind the curtain. The HTML element classes are tightly bound within their container, CSS variables cleanly dictate the dark theme, and a sneaky custom JavaScript node handles state transitions flawlessly. It's stable. You can <span class="twine-link" onclick="changeStory('break-logic')">attempt to break the layout logic</span> or <span class="twine-link" onclick="changeStory('start-node')">return to reality</span>.
+                    </div>
+
+                    <!-- Ending A -->
+                    <div id="leave-review" class="twine-node" style="display: none;">
+                        You leave a glowing rating and a comment detailing your playthrough. A developer's motivation meter increases by 15%. You have achieved the <strong>[Community Champion Ending]</strong>. <span class="twine-link" onclick="changeStory('start-node')">Restart?</span>
+                    </div>
+
+                    <!-- Ending B -->
+                    <div id="break-logic" class="twine-node" style="display: none;">
+                        You inject an unclosed division tag into the browser console. The screen flickers, but the container classes hold firm under pressure. Nice try! You have achieved the <strong>[QA Tester Ending]</strong>. <span class="twine-link" onclick="changeStory('start-node')">Restart?</span>
+                    </div>
+                </div>
+                <!-- INTERACTIVE EASTER EGG END -->
                 
-                <div class="skills-title">Toolkit & Expertise</div>
+                <div class="skills-title" style="margin-top: 30px;">Toolkit & Expertise</div>
                 <div class="skills-grid">
                     <span class="skill-tag">Interactive Fiction</span>
                     <span class="skill-tag">Twine Engine</span>
@@ -309,5 +366,21 @@
         </section>
         
     </div> <!-- THIS CLOSES THE CONTAINER -->
+
+    <script>
+    function changeStory(nodeId) {
+        // Hide all story nodes
+        document.querySelectorAll('.twine-node').forEach(node => {
+            node.style.display = 'none';
+        });
+        
+        // Show the chosen story node
+        const activeNode = document.getElementById(nodeId);
+        if (activeNode) {
+            activeNode.style.display = 'block';
+        }
+    }
+</script>
+    
 </body>
 </html>
