@@ -222,4 +222,315 @@
             line-height: 1.7;
         }
         .skills-title {
-            font-size: 1.1rem
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        .skill-tag {
+            background-color: #222227;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
+        }
+        .skill-tag:hover {
+            border-color: var(--accent-color);
+            transform: translateY(-1px);
+        }
+
+        /* TWINE EASTER EGG STYLES */
+        .twine-easter-egg {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border-color);
+            font-family: Courier, monospace; 
+            font-size: 0.95rem;
+        }
+        .twine-node {
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .twine-link {
+            color: var(--accent-color);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--accent-color);
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+        .twine-link:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            text-shadow: 0 0 8px var(--accent-color);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(2px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* PRESS KIT STYLES */
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            width: 100%;
+        }
+        .press-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .press-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0 0 5px 0;
+        }
+        .press-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+        }
+        .press-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #222227;
+            color: var(--accent-color);
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            border: 1px solid var(--border-color);
+            transition: all 0.2s ease-in-out;
+            text-align: center;
+        }
+        .press-link:hover {
+            background-color: var(--accent-color);
+            color: #ffffff;
+            border-color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <header>
+            <h1>JohnnyPeps</h1>
+            <p class="subtitle">Game Developer & Storyteller</p>
+        </header>
+
+        <!-- GAMES SECTION USING ORIGINAL HORIZONTAL EMBEDS -->
+        <section>
+            <h2>My Games</h2>
+            
+            <div class="game-card">
+               <iframe src="https://itch.io/embed/4725585?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/cosmic-oracle-fortune-teller">Cosmic Oracle: Fortune Teller by JohnnyPeps</a></iframe> 
+            </div>
+            <div class="game-card">
+                <iframe src="https://itch.io/embed/4700564?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/cosmic-oracle">Cosmic Oracle by JohnnyPeps</a></iframe> 
+            </div>
+            <div class="game-card">
+                <iframe src="https://itch.io/embed/4695680?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/toxic-relationship">Toxic Relationship by JohnnyPeps</a></iframe>
+            </div>
+            <div class="game-card">
+                <iframe src="https://itch.io/embed/4677444?linkback=true&amp;border_width=0&amp;bg_color=1a1a1e&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=2b2b32"><a href="https://johnnypeps.itch.io/paralegal-simulator">Paralegal Simulator by JohnnyPeps</a></iframe>
+            </div>
+            
+        </section>
+        
+        <!-- PRESS KIT & MEDIA ASSETS SECTION -->
+        <section>
+            <h2>Media & Press Kits</h2>
+            <div class="press-grid">
+                
+                  <!-- Fortune Teller Press Kit -->
+                <div class="press-card">
+                <div>
+                    <h3 class="press-title">Fortune Tellar</h3>
+                    <p class="press-desc">Access high-resolution promotional art, gameplay screenshots, logos, and press release details for media coverage.</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1kx87BLRY_oVDLeomWIFLvypErlyIl6qN?" target="_blank" class="press-link">
+                    Download Press Assets            
+                        </a>
+            </div>
+                 
+                <!-- Cosmic Oracle Press Kit -->
+                <div class="press-card">
+                <div>
+                    <h3 class="press-title">Cosmic Oracle</h3>
+                    <p class="press-desc">Access high-resolution promotional art, gameplay screenshots, logos, and press release details for media coverage.</p>
+                </div>
+                <a href="https://drive.google.com/drive/u/0/folders/1ETHQ2ZL5pfiOKZHRAOYOn2YaSzBI3mWG" target="_blank" class="press-link">
+                    Download Press Assets
+                </a>
+            </div>
+                <div class="press-card">
+                    <div>
+                        <h3 class="press-title">Paralegal Simulator</h3>
+                        <p class="press-desc">Access high-resolution promotional banners, gameplay screenshots, transparent logos, and fact sheets for coverage.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1C_tAGl5f_bDKm6QQ6LF9N8fNNQS3vsys?usp=drive_link" target="_blank" class="press-link">
+                        Download Press Assets
+                    </a>
+                </div>
+
+                <!-- Toxic Relationship Press Kit -->
+                <div class="press-card">
+                    <div>
+                        <h3 class="press-title">Toxic Relationship</h3>
+                        <p class="press-desc">Download transparent titles, key promotional art, vertical graphics, and game details ready for media use.</p>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1qE3fChHqKCGV6aczIY3t-cP0kzmhTW5E?usp=drive_link" target="_blank" class="press-link">
+                        Download Press Assets
+                    </a>
+                </div>
+
+            </div>
+        </section>
+      
+
+        <!-- BALANCED 12-LINK SOCIAL GRID -->
+        <section>
+            <h2>Connect With Me</h2>
+            <div class="social-grid">
+                <a href="https://x.com/JohnnyDKin" target="_blank" class="social-btn x-com">X / Twitter</a>
+                <a href="https://www.youtube.com/@johnnyDKin" target="_blank" class="social-btn yt">YouTube</a>
+                <a href="https://music.youtube.com/@johnnyDKin" target="_blank" class="social-btn ytm">YouTube Music</a>
+                <a href="https://www.twitch.tv/johnnypeps" target="_blank" class="social-btn tw">Twitch</a>
+                
+                <a href="https://open.spotify.com/user/johnnypeps" target="_blank" class="social-btn sp">Spotify</a>
+                <a href="https://www.tiktok.com/@johnnypeps_official?lang=en" target="_blank" class="social-btn tt">TikTok (Official)</a>
+                <a href="https://www.tiktok.com/@john_rocco" target="_blank" class="social-btn tt">TikTok (Personal)</a>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="social-btn ig">Instagram</a>
+                
+                <a href="https://www.facebook.com/thelastone" target="_blank" class="social-btn fb">Facebook</a>
+                <a href="https://steamcommunity.com/id/johnnypeppers/" target="_blank" class="social-btn st">Steam</a>
+                <a href="https://www.reddit.com/user/Johnnypeps/" target="_blank" class="social-btn rd">Reddit</a>
+                <a href="https://www.ebay.com/usr/johnsquic" target="_blank" class="social-btn eb">eBay Store</a>
+            </div>
+        </section>
+
+        <!-- INSTAGRAM DISPLAY SECTION -->
+        <section>
+            <h2>Featured Social</h2>
+            <div class="instagram-card">
+                <h3 style="margin: 0 0 8px 0; color: var(--text-main);">Follow Me on Instagram</h3>
+                <p style="margin: 0; color: var(--text-muted); font-size: 14px;">Stay updated with game dev screenshots, behind-the-scenes stories, and updates!</p>
+                <a href="https://www.instagram.com/johnnypeps/" target="_blank" class="instagram-btn">View Profile @johnnypeps</a>
+            </div>
+        </section>
+
+        <!-- FEATURED VIDEO PLAYBACK -->
+        <section>
+            <h2>Featured Media</h2>
+            <div class="media-card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Yq-F8Ku4ZUQ" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        
+        <!-- THE SCREENING ROOM BLOG SECTION -->
+        <section>
+            <h2>Movie Reviews</h2>
+            <div class="blog-card">
+                <h3 style="margin: 0 0 8px 0; color: var(--text-main);">The Screening Room</h3>
+                <p style="margin: 0 0 15px 0; color: var(--text-muted); font-size: 14px;">Read my unfiltered movie reviews, deep dives, and no-nonsense critiques.</p>
+                <!-- NOTE: Replace YOUR_BLOG_URL_HERE with the actual web address of your Blogger site -->
+                <a href="YOUR_BLOG_URL_HERE" target="_blank" class="blog-btn">Visit The Blog</a>
+            </div>
+        </section>
+
+        <!-- ABOUT THE DEVELOPER SECTION -->
+        <section>
+            <h2>About the Developer</h2>
+            <div class="about-card">
+                <p class="about-bio">
+                    Hey, I'm <strong>JohnnyPeps</strong>. I'm an independent game developer, writer, and digital creator focused on crafting immersive, choice-driven narrative experiences. I love building logic systems where your decisions genuinely matter—whether that's navigating intense psychological thrillers or managing complex, real-world simulations. Thanks for stopping by, and I hope you enjoy exploring the branching paths of my stories!
+                </p>
+
+                <!-- INTERACTIVE EASTER EGG START -->
+                <div class="twine-easter-egg">
+                    <!-- Start Node -->
+                    <div id="start-node" class="twine-node">
+                        You find yourself standing on a minimal portfolio website. A sleek grid of social icons hums quietly below. You can choose to <span class="twine-link" onclick="changeStory('click-game')">play a game</span> or <span class="twine-link" onclick="changeStory('look-around')">inspect the source code</span>.
+                    </div>
+
+                    <!-- Path A -->
+                    <div id="click-game" class="twine-node" style="display: none;">
+                        You scroll up and launch one of the interactive fiction titles. Hours pass instantly as variables cascade, branching story lines unfold, and your choices seal your fate. You emerge blinking into the dark room. Will you <span class="twine-link" onclick="changeStory('leave-review')">leave feedback on itch.io</span> or <span class="twine-link" onclick="changeStory('start-node')">turn back to the beginning</span>?
+                    </div>
+
+                    <!-- Path B -->
+                    <div id="look-around" class="twine-node" style="display: none;">
+                        You peer behind the curtain. The HTML element classes are tightly bound within their container, CSS variables cleanly dictate the dark theme, and a sneaky custom JavaScript node handles state transitions flawlessly. It's stable. You can <span class="twine-link" onclick="changeStory('break-logic')">attempt to break the layout logic</span> or <span class="twine-link" onclick="changeStory('start-node')">return to reality</span>.
+                    </div>
+
+                    <!-- Ending A -->
+                    <div id="leave-review" class="twine-node" style="display: none;">
+                        You leave a glowing rating and a comment detailing your playthrough. A developer's motivation meter increases by 15%. You have achieved the <strong>[Community Champion Ending]</strong>. <span class="twine-link" onclick="changeStory('start-node')">Restart?</span>
+                    </div>
+
+                    <!-- Ending B -->
+                    <div id="break-logic" class="twine-node" style="display: none;">
+                        You inject an unclosed division tag into the browser console. The screen flickers, but the container classes hold firm under pressure. Nice try! You have achieved the <strong>[QA Tester Ending]</strong>. <span class="twine-link" onclick="changeStory('start-node')">Restart?</span>
+                    </div>
+                </div>
+                <!-- INTERACTIVE EASTER EGG END -->
+                
+                <div class="skills-title" style="margin-top: 30px;">Toolkit & Expertise</div>
+                <div class="skills-grid">
+                    <span class="skill-tag">Interactive Fiction</span>
+                    <span class="skill-tag">Twine Engine</span>
+                    <span class="skill-tag">Narrative Design</span>
+                    <span class="skill-tag">HTML5 / CSS3</span>
+                    <span class="skill-tag">Simulation Systems</span>
+                    <span class="skill-tag">Game Logic Architecture</span>
+                    <span class="skill-tag">Community Management</span>
+                </div>
+            </div>
+        </section>
+        
+    </div> <!-- THIS CLOSES THE CONTAINER -->
+
+    <script>
+    function changeStory(nodeId) {
+        // Hide all story nodes
+        document.querySelectorAll('.twine-node').forEach(node => {
+            node.style.display = 'none';
+        });
+        
+        // Show the chosen story node
+        const activeNode = document.getElementById(nodeId);
+        if (activeNode) {
+            activeNode.style.display = 'block';
+        }
+    }
+</script>
+    
+</body>
+</html>
